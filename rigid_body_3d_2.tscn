@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://dykf653pte6kv"]
+
+[ext_resource type="Material" uid="uid://cyf0ro3i5u62r" path="res://glass.tres" id="1_0lr5f"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_vuey8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ri6s5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vonv5"]
+
+[node name="RigidBody3D2" type="RigidBody3D"]
+transform = Transform3D(0.265893, 0.964003, 9.8076e-09, -0.963535, 0.265764, -0.0311491, -0.0300279, 0.00828235, 0.999515, -0.229147, 4.74855, 2.09745)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_0lr5f")
+mesh = SubResource("BoxMesh_vuey8")
+surface_material_override/0 = SubResource("StandardMaterial3D_ri6s5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_vonv5")
